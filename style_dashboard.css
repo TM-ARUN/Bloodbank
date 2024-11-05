@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    transition: margin-left 0.3s; /* Smooth transition for body margin */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 3px 20px;
+    border-bottom: 2px solid #e0e0e0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.header img {
+    height: 50px;
+}
+
+.header .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header .user-info {
+    text-align: right;
+    margin-right: 30px;
+}
+
+.header .user-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.header .user-info a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 60px; /* Space below the fixed header */
+    transition: margin-left 0.3s; /* Smooth transition for navbar */
+}
+
+.navbar .menu-icon {
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    padding-top: 80px; /* Space below the header */
+    transition: margin-left 0.3s; /* Smooth transition for container */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-right: 1px solid #ff0000;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px; /* Aligns sidebar just below the header */
+    left: 0;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    color: #333333;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: #ff0000;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* JavaScript for toggling the sidebar */
+.sidebar-active .sidebar {
+    display: flex;
+}
+
+.sidebar-active .container {
+    margin-left: 200px; /* Shift content to the right when sidebar is active */
+}
+
+.sidebar-active .navbar {
+    margin-left: 200px; /* Shift navbar text to the right when sidebar is active */
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    padding-left: 15px;
+    list-style-type: none;
+    background-color: #f9f9f9;
+    border-left: 2px solid #ff0000;
+    margin: 0;
+}
+
+.dropdown li {
+    padding: 5px 0;
+}
+
+.dropdown li a {
+    color: #333333;
+    font-size: 14px;
+}
+
+.dropdown li a:hover {
+    color: #ff0000;
+}
+
+/* Show dropdown when .show class is added */
+.dropdown.show {
+    display: block;
+}
+
+.arrow {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-bottom: 100px;
+    background-color: #f9f9f9;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: red;
+}
+
+.stat-item-label {
+    margin-top: 10px;
+    font-size: 16px;
+}

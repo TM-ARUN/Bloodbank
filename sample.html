@@ -1,0 +1,217 @@
+<!-- donor_registration -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 3px 20px;
+            border-bottom: 2px solid #e0e0e0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        .header img {
+            height: 50px;
+        }
+        .header .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .header .user-info {
+            text-align: right;
+            margin-right: 30px;
+        }
+        .header .user-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .header .user-info a:hover {
+            text-decoration: underline;
+        }
+        .navbar {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 60px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .menu-icon {
+            margin-right: 10px;
+        }
+        .container {
+            margin: 200px;
+            margin-top: 100px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 150px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group span {
+            color: red;
+        }
+        .form-buttons {
+            text-align: right;
+        }
+        .form-buttons button {
+            margin-left: 5px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-buttons button:hover {
+            background-color: darkred;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="https://storage.googleapis.com/a1aa/image/4JEeyOlRe2vfwoMPFJZxYX3hVQBx1YuhHb49DXnfS4z9JbuOB.jpg" alt="Organization Logo" width="50" height="50">
+        </div>
+        <div class="title">Share & Care Palliative Care</div>
+        <div class="user-info">
+            <div>Welcome! <a href="#">John Doe</a></div>
+            <div>Last Logged in 31/01/2024 11:12 AM</div>
+        </div>
+    </div>
+
+    <div class="navbar" onclick="toggleSidebar()">
+        <i class="fas fa-bars menu-icon"></i>Donor Registration
+    </div>
+
+    <div class="container">
+        <h2>Donor Registration</h2>
+        <form class="donor-form">
+            <div class="form-group">
+                <label>Donor ID: <span>*</span></label>
+                <input type="text" required>
+                <label>&nbsp;&nbsp;&nbsp;Donor First Name:<span>*</span></label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>Middle Name:</label>
+                <input type="text">
+                <label>&nbsp;&nbsp;&nbsp;Last Name:</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label>Gender: <span>*</span></label>
+                <select required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label>&nbsp;&nbsp;&nbsp;Date of Birth:</label>
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label>Age: <span>*</span></label>
+                <input type="number" required>
+                <label>&nbsp;&nbsp;&nbsp;Address 1:</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label>Address 2:</label>
+                <input type="text">
+                <label>&nbsp;&nbsp;&nbsp;Area: <span>*</span></label>
+                <select required>
+                    <option value="">Select Area</option>
+                    <option value="area1">Area 1</option>
+                    <option value="area2">Area 2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mobile No: <span>*</span></label>
+                <input type="tel" required>
+                <label>&nbsp;&nbsp;&nbsp;Alternate No:</label>
+                <input type="tel">
+            </div>
+            <div class="form-group">
+                <label>Email ID:</label>
+                <input type="email">
+                <label>&nbsp;&nbsp;&nbsp;Blood Group: <span>*</span></label>
+                <select required>
+                    <option value="">Select Blood Group</option>
+                    <option value="a+">A+</option>
+                    <option value="b+">B+</option>
+                    <option value="o+">O+</option>
+                    <option value="ab+">AB+</option>
+                    <option value="a-">A-</option>
+                    <option value="b-">B-</option>
+                    <option value="o-">O-</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Did you donate blood earlier? <span>*</span></label>
+                <div>
+                    <label><input type="radio" name="donated" value="yes" required> Yes</label>
+                    <label><input type="radio" name="donated" value="no"> No</label>
+                </div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Last Donated Date:</label>
+                <input type="date">
+            </div>
+            <div class="form-buttons">
+                <button type="button" class="clear-btn">Clear</button>
+                <button type="submit" class="save-btn">Save</button>
+                <button type="submit" class="save-donate-btn">Save & Donate Blood</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>Copyrights Reserved @2024</p>
+    </footer>
+
+    <script>
+        document.querySelector('.clear-btn').addEventListener('click', function() {
+            document.querySelector('.donor-form').reset();
+        });
+    </script>
+</body>
+</html>
